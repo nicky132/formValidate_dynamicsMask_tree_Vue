@@ -1,0 +1,75 @@
+<template>
+    <div>
+        <ul>
+            <item class="item" :model="treeData"></item>
+        </ul>
+    </div>
+</template>
+<script>
+    import Item from './item';
+    export default{
+        name:'app',
+        data(){
+            return {
+                treeData:{
+                    title:'web全栈架构师',
+                    children:[
+                        {
+                            title:'java架构师'
+                        },
+                        {
+                            title:'js高级',
+                            children:[
+                                {
+                                    title:'es6'
+                                },
+                                {
+                                    title:'动效'
+                                }
+                            ]
+                        },
+                        {
+                            title:'web全栈',
+                            children:[
+                                {
+                                    title:'vue训练营',
+                                    expand:true,
+                                    children:[
+                                        {
+                                            title:'组件化'
+                                        },
+                                        {
+                                            title:'源码'
+                                        },
+                                        {
+                                            title:'docker部署'
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title:'react',
+                            children:[
+                                {
+                                    title:'jsx'
+                                },
+                                {
+                                    title:'虚拟dom'
+                                },
+                            ]
+                        },
+                        {
+                            title:'node'
+                        }
+                    ]
+                }
+            }
+        },
+        components:{
+            Item
+        },
+        methods:{
+        }
+    }
+</script>
